@@ -1,7 +1,7 @@
 import { useI18n } from '../i18n/context'
+import { site } from '../data/site'
 import { Button } from '../components/Button'
 import { FaqList } from '../components/FaqList'
-import { LogoMark } from '../components/LogoMark'
 import { Reveal } from '../components/Reveal'
 import { Seo } from '../components/Seo'
 
@@ -13,6 +13,9 @@ export function HomePage() {
     '@type': 'Church',
     name: t.brand.name,
     description: t.meta.description,
+    url: site.website,
+    email: site.email,
+    image: site.logo,
     inLanguage: lang === 'fr' ? 'fr' : 'en',
   }
 
@@ -67,7 +70,20 @@ export function HomePage() {
             </p>
           </div>
           <aside className="hero-panel hero-enter" style={{ ['--enter-delay' as string]: '280ms' }}>
-            <LogoMark title={t.brand.placeholderLogo} />
+            <img
+              className="hero-panel-media"
+              src={site.images.leader}
+              alt={t.media.altLeader}
+              decoding="async"
+            />
+            <img
+              className="hero-panel-badge"
+              src={site.logo}
+              alt={t.media.altLogo}
+              width={72}
+              height={72}
+              decoding="async"
+            />
             <p>
               <strong>{t.common.confidential}</strong>
               {t.prayer.lead}

@@ -11,7 +11,10 @@ export const fr: Messages = {
     short: 'God Voice',
     line: 'City of Wealths',
     ministry: 'Ministry',
-    placeholderLogo: 'Marque provisoire — le logo officiel arrivera plus tard',
+    placeholderLogo: 'Emblème officiel du ministère',
+    email: 'gvcwministry@gmail.com',
+    website: 'www.gvcwministry.net',
+    websiteUrl: 'https://www.gvcwministry.net',
   },
   common: {
     skip: 'Aller au contenu',
@@ -34,7 +37,8 @@ export const fr: Messages = {
     contact: 'Contact',
     locationPending: 'Adresse et point sur la carte à fournir',
     schedulePending: 'Horaires, programmes et diffusions à fournir',
-    contactPending: 'Téléphone, e-mail et WhatsApp à fournir',
+    contactPending: 'Téléphone et WhatsApp à fournir',
+    phonePending: 'Numéro de téléphone à venir',
   },
   nav: {
     home: 'Accueil',
@@ -61,6 +65,18 @@ export const fr: Messages = {
     copyright: 'God Voice & City of Wealths Ministry. Tous droits réservés.',
     verify:
       'Chaque affirmation, témoignage, image et coordonnée sera vérifié avant la mise en ligne définitive.',
+  },
+  media: {
+    momentsKicker: '07 — Le ministère en images',
+    momentsTitle: 'Des moments dans la maison de Dieu.',
+    momentsBody:
+      'Des photographies authentiques des rassemblements — enseignement, prière et louange — partagées avec soin pour les personnes qu’elles montrent.',
+    altTeaching: 'Enseignement du ministère depuis la chaire',
+    altPrayer: 'Un moment de prière pendant un culte',
+    altWorship: 'Louange et proclamation dans l’assemblée',
+    altMessage: 'Annonce de la Parole au microphone',
+    altLeader: 'La direction du ministère s’adressant à l’assemblée',
+    altLogo: 'Emblème de God Voice & City of Wealths Ministry',
   },
   home: {
     eyebrow: 'Délivrance · Enseignement · Restauration',
@@ -215,7 +231,7 @@ export const fr: Messages = {
       'Cette section accueillera des portraits responsables de ceux qui conduisent le ministère — appel, charges, et un moyen de contact. Tant que ces éléments ne sont pas approuvés, nous n’inventerons pas de liste de responsables.',
     govTitle: 'Gouvernance et contact',
     govBody:
-      'Le nom légal, la tutelle et un contact responsable seront publiés ici. Pour l’instant, utilisez les formulaires de prière et de visite : les messages seront acheminés dès que le circuit sera confirmé.',
+      'Écrivez à gvcwministry@gmail.com, ou visitez www.gvcwministry.net. Le nom légal, la tutelle, le téléphone et WhatsApp seront publiés ici dès qu’ils seront confirmés.',
   },
   ministries: {
     kicker: 'Comment nous servons',

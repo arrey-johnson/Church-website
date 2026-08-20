@@ -10,7 +10,12 @@ export function SupportPage() {
   return (
     <>
       <Seo title={`${t.nav.support} | ${t.brand.name}`} description={t.support.lead} />
-      <PageHero kicker={t.support.kicker} title={t.support.title} lead={t.support.lead} />
+      <PageHero
+        kicker={t.support.kicker}
+        title={t.support.title}
+        lead={t.support.lead}
+        align="center"
+      />
       <section className="section">
         <div className="wrap">
           <Reveal className="section-head">

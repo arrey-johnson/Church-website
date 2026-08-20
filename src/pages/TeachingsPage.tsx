@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useI18n } from '../i18n/context'
+import { site } from '../data/site'
 import { PageHero } from '../components/PageHero'
 import { Reveal } from '../components/Reveal'
 import { Seo } from '../components/Seo'
@@ -23,9 +24,25 @@ export function TeachingsPage() {
   return (
     <>
       <Seo title={`${t.nav.teachings} | ${t.brand.name}`} description={t.teachings.lead} />
-      <PageHero kicker={t.teachings.kicker} title={t.teachings.title} lead={t.teachings.lead} />
+      <PageHero
+        kicker={t.teachings.kicker}
+        title={t.teachings.title}
+        lead={t.teachings.lead}
+        align="center"
+      />
       <section className="section">
         <div className="wrap">
+          <Reveal
+            className="media-frame wide centered"
+            style={{ marginBottom: '1.8rem' }}
+          >
+            <img
+              src={site.images.message}
+              alt={t.media.altMessage}
+              loading="lazy"
+              decoding="async"
+            />
+          </Reveal>
           <Reveal className="search-row">
             <input
               value={query}

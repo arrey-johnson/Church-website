@@ -10,7 +10,12 @@ export function VisionPage() {
   return (
     <>
       <Seo title={`${t.nav.vision} | ${t.brand.name}`} description={t.vision.lead} />
-      <PageHero kicker={t.vision.kicker} title={t.vision.title} lead={t.vision.lead} />
+      <PageHero
+        kicker={t.vision.kicker}
+        title={t.vision.title}
+        lead={t.vision.lead}
+        align="center"
+      />
       <section className="section section-navy">
         <div className="wrap">
           <Reveal>
@@ -48,9 +53,15 @@ export function VisionPage() {
               {t.vision.leadBody}
             </p>
           </Reveal>
-          <Reveal delay={120} variant="scale" as="article" className="info-card pending">
+          <Reveal delay={120} as="article" className="info-card">
             <h3>{t.vision.govTitle}</h3>
             <p>{t.vision.govBody}</p>
+            <div className="contact-links" style={{ marginTop: '0.9rem' }}>
+              <a href={`mailto:${t.brand.email}`}>{t.brand.email}</a>
+              <a href={t.brand.websiteUrl} target="_blank" rel="noreferrer">
+                {t.brand.website}
+              </a>
+            </div>
             <div className="hero-actions">
               <Button to={to('prayer')} variant="navy">
                 {t.cta.prayer}

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react'
 
 type Props = {
   children: ReactNode
@@ -6,6 +6,7 @@ type Props = {
   as?: 'div' | 'section' | 'article' | 'header' | 'aside'
   delay?: number
   variant?: 'up' | 'fade' | 'left' | 'scale'
+  style?: CSSProperties
 }
 
 export function Reveal({
@@ -14,6 +15,7 @@ export function Reveal({
   as: Tag = 'div',
   delay = 0,
   variant = 'up',
+  style,
 }: Props) {
   const ref = useRef<HTMLElement | null>(null)
   const [visible, setVisible] = useState(false)
@@ -45,7 +47,7 @@ export function Reveal({
     <Tag
       ref={ref as never}
       className={`reveal reveal-${variant}${visible ? ' is-visible' : ''} ${className}`.trim()}
-      style={{ transitionDelay: visible ? `${delay}ms` : '0ms' }}
+      style={{ ...style, transitionDelay: visible ? `${delay}ms` : '0ms' }}
     >
       {children}
     </Tag>

@@ -10,7 +10,12 @@ export function TestimoniesPage() {
   return (
     <>
       <Seo title={`${t.nav.testimonies} | ${t.brand.name}`} description={t.testimonies.lead} />
-      <PageHero kicker={t.testimonies.kicker} title={t.testimonies.title} lead={t.testimonies.lead} />
+      <PageHero
+        kicker={t.testimonies.kicker}
+        title={t.testimonies.title}
+        lead={t.testimonies.lead}
+        align="center"
+      />
       <section className="section">
         <div className="wrap split">
           <Reveal>

@@ -9,7 +9,10 @@ export const en = {
     short: 'God Voice',
     line: 'City of Wealths',
     ministry: 'Ministry',
-    placeholderLogo: 'Placeholder mark — official logo forthcoming',
+    placeholderLogo: 'Official ministry crest',
+    email: 'gvcwministry@gmail.com',
+    website: 'www.gvcwministry.net',
+    websiteUrl: 'https://www.gvcwministry.net',
   },
   common: {
     skip: 'Skip to content',
@@ -32,7 +35,8 @@ export const en = {
     contact: 'Contact',
     locationPending: 'Address and map pin to be provided',
     schedulePending: 'Service times, programmes, and broadcasts to be provided',
-    contactPending: 'Phone, email, and WhatsApp to be provided',
+    contactPending: 'Phone and WhatsApp to be provided',
+    phonePending: 'Phone number forthcoming',
   },
   nav: {
     home: 'Home',
@@ -59,6 +63,18 @@ export const en = {
     copyright: 'God Voice & City of Wealths Ministry. All rights reserved.',
     verify:
       'Every public claim, testimony, image, and contact detail will be verified before final launch.',
+  },
+  media: {
+    momentsKicker: '07 — Ministry in view',
+    momentsTitle: 'Moments from the house of God.',
+    momentsBody:
+      'Authentic photographs from ministry gatherings — teaching, prayer, and worship — shared with care for the people they show.',
+    altTeaching: 'Ministry teaching from the pulpit',
+    altPrayer: 'A moment of prayer during a service',
+    altWorship: 'Worship and proclamation in the congregation',
+    altMessage: 'Delivering the Word with the microphone',
+    altLeader: 'Ministry leadership addressing the gathering',
+    altLogo: 'God Voice & City of Wealths Ministry crest',
   },
   home: {
     eyebrow: 'Deliverance · Teaching · Restoration',
@@ -213,7 +229,7 @@ export const en = {
       'This section will hold short, accountable portraits of those who shepherd the ministry — calling, responsibilities, and a way to make contact. Until those materials are approved, we will not invent a leadership roster.',
     govTitle: 'Governance and contact',
     govBody:
-      'Legal name, oversight, and a responsible contact for the ministry will be published here. For now, use the prayer and visit forms and the details will be routed once the workflow is confirmed.',
+      'Write to gvcwministry@gmail.com, or visit www.gvcwministry.net. Legal name, oversight details, phone, and WhatsApp will be published here as soon as they are confirmed.',
   },
   ministries: {
     kicker: 'How we serve',

@@ -17,9 +17,13 @@ export function PrayerPage() {
             <Reveal as="article" className="info-card">
               <h3>{t.common.confidential}</h3>
               <p className="muted">{t.prayer.timeframe}</p>
-              <p className="muted" style={{ marginTop: '0.8rem' }}>
-                {t.common.contactPending}
-              </p>
+              <div className="contact-links" style={{ marginTop: '0.9rem' }}>
+                <a href={`mailto:${t.brand.email}`}>{t.brand.email}</a>
+                <a href={t.brand.websiteUrl} target="_blank" rel="noreferrer">
+                  {t.brand.website}
+                </a>
+                <span className="muted">{t.common.phonePending}</span>
+              </div>
             </Reveal>
             <Reveal as="article" className="info-card pending" delay={100}>
               <h3>{t.common.contact}</h3>

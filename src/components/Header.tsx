@@ -50,7 +50,7 @@ export function Header() {
     <header className={`header${scrolled ? ' is-scrolled' : ''}`}>
       <div className="wrap-wide header-inner">
         <Link className="logo" to={to()} aria-label={t.brand.name}>
-          <LogoMark className="logo-mark" title={t.brand.placeholderLogo} />
+          <LogoMark className="logo-mark" title={t.media.altLogo} />
           <span className="logo-text">
             <strong>{t.brand.short}</strong>
             <span>{t.brand.line}</span>

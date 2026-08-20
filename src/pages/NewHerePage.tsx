@@ -49,6 +49,12 @@ export function NewHerePage() {
             <Reveal as="article" className="info-card" delay={180}>
               <h3>{t.newHere.onlineLabel}</h3>
               <p className="muted">{t.newHere.onlineBody}</p>
+              <div className="contact-links" style={{ marginTop: '0.8rem' }}>
+                <a href={`mailto:${t.brand.email}`}>{t.brand.email}</a>
+                <a href={t.brand.websiteUrl} target="_blank" rel="noreferrer">
+                  {t.brand.website}
+                </a>
+              </div>
             </Reveal>
           </div>
         </div>

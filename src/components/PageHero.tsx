@@ -4,13 +4,14 @@ type Props = {
   kicker: string
   title: string
   lead?: string
+  align?: 'left' | 'center'
 }
 
-export function PageHero({ kicker, title, lead }: Props) {
+export function PageHero({ kicker, title, lead, align = 'left' }: Props) {
   const { t } = useI18n()
 
   return (
-    <header className="page-hero">
+    <header className={`page-hero${align === 'center' ? ' is-centered' : ''}`}>
       <div className="wrap">
         <p className="kicker hero-enter" style={{ ['--enter-delay' as string]: '0ms' }}>
           {kicker}
