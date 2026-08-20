@@ -23,7 +23,7 @@ export function SupportPage() {
           </Reveal>
           <div className="benefit-grid">
             {t.support.uses.map((item, index) => (
-              <Reveal key={item.title} as="article" className="card" delay={index * 90}>
+              <Reveal key={item.title} as="article" className="soft-block" delay={index * 90}>
                 <h3>{item.title}</h3>
                 <p className="muted">{item.body}</p>
               </Reveal>
@@ -38,9 +38,7 @@ export function SupportPage() {
             <p className="lead" style={{ marginTop: '1rem' }}>
               {t.support.giveBody}
             </p>
-            <article className="info-card pending" style={{ marginTop: '1.2rem' }}>
-              <h3>{t.support.giveNote}</h3>
-            </article>
+            <p className="quiet-note">{t.support.giveNote}</p>
           </Reveal>
           <Reveal delay={120} as="article" className="info-card">
             <h3>{t.support.applyTitle}</h3>

@@ -4,6 +4,7 @@ import { isLang, messages } from '../i18n'
 import { I18nContext } from '../i18n/context'
 import { Footer } from './Footer'
 import { Header } from './Header'
+import { MobileCta } from './MobileCta'
 import { PageFade } from './PageFade'
 
 export function Layout() {
@@ -39,6 +40,7 @@ export function Layout() {
           <Outlet />
         </PageFade>
       </main>
+      <MobileCta />
       <Footer />
     </I18nContext.Provider>
   )

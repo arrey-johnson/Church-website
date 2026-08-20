@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useI18n } from '../i18n/context'
 
 type Faq = {
   q: string
@@ -7,7 +6,6 @@ type Faq = {
 }
 
 export function FaqList({ items }: { items: readonly Faq[] }) {
-  const { t } = useI18n()
   const [open, setOpen] = useState(0)
 
   return (
@@ -32,7 +30,6 @@ export function FaqList({ items }: { items: readonly Faq[] }) {
           </div>
         )
       })}
-      <p className="draft-note">{t.common.draft}</p>
     </div>
   )
 }

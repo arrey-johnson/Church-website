@@ -1,11 +1,12 @@
 import { useI18n } from '../i18n/context'
+import { Button } from '../components/Button'
 import { MinistryForm } from '../components/MinistryForm'
 import { PageHero } from '../components/PageHero'
 import { Reveal } from '../components/Reveal'
 import { Seo } from '../components/Seo'
 
 export function NewHerePage() {
-  const { t } = useI18n()
+  const { t, to } = useI18n()
 
   return (
     <>
@@ -18,7 +19,7 @@ export function NewHerePage() {
           </Reveal>
           <div className="benefit-grid">
             {t.newHere.expect.map((item, index) => (
-              <Reveal key={item.title} as="article" className="card" delay={index * 90}>
+              <Reveal key={item.title} as="article" className="soft-block" delay={index * 90}>
                 <h3>{item.title}</h3>
                 <p className="muted">{item.body}</p>
               </Reveal>
@@ -30,23 +31,20 @@ export function NewHerePage() {
         <div className="wrap">
           <Reveal className="section-head">
             <h2>{t.newHere.practicalTitle}</h2>
+            <p className="lead" style={{ marginTop: '0.85rem' }}>
+              {t.newHere.practicalLead}
+            </p>
           </Reveal>
-          <div className="card-grid">
-            <Reveal as="article" className="info-card pending" delay={0}>
+          <div className="detail-list">
+            <Reveal as="article" className="soft-block" delay={0}>
               <h3>{t.newHere.timesLabel}</h3>
-              <p>{t.newHere.timesBody}</p>
-              <p className="muted" style={{ marginTop: '0.7rem' }}>
-                {t.common.schedulePending}
-              </p>
+              <p className="muted">{t.newHere.timesBody}</p>
             </Reveal>
-            <Reveal as="article" className="info-card pending" delay={90}>
+            <Reveal as="article" className="soft-block" delay={80}>
               <h3>{t.newHere.placeLabel}</h3>
-              <p>{t.newHere.placeBody}</p>
-              <p className="muted" style={{ marginTop: '0.7rem' }}>
-                {t.common.locationPending}
-              </p>
+              <p className="muted">{t.newHere.placeBody}</p>
             </Reveal>
-            <Reveal as="article" className="info-card" delay={180}>
+            <Reveal as="article" className="soft-block" delay={160}>
               <h3>{t.newHere.onlineLabel}</h3>
               <p className="muted">{t.newHere.onlineBody}</p>
               <div className="contact-links" style={{ marginTop: '0.8rem' }}>
@@ -56,6 +54,11 @@ export function NewHerePage() {
                 </a>
               </div>
             </Reveal>
+          </div>
+          <div className="hero-actions" style={{ marginTop: '1.6rem' }}>
+            <Button to={to('prayer')} variant="navy">
+              {t.cta.prayer}
+            </Button>
           </div>
         </div>
       </section>

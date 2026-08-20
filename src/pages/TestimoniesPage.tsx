@@ -17,19 +17,16 @@ export function TestimoniesPage() {
         align="center"
       />
       <section className="section">
-        <div className="wrap split">
-          <Reveal>
+        <div className="wrap">
+          <Reveal className="section-head">
             <h2>{t.testimonies.policyTitle}</h2>
-            <ul className="list-plain" style={{ marginTop: '1rem' }}>
-              {t.testimonies.policy.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
           </Reveal>
-          <Reveal delay={120} as="article" className="info-card pending">
-            <h3>{t.testimonies.awaitTitle}</h3>
-            <p>{t.testimonies.awaitBody}</p>
-          </Reveal>
+          <ul className="list-plain policy-list">
+            {t.testimonies.policy.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p className="quiet-note">{t.testimonies.awaitBody}</p>
         </div>
       </section>
       <section className="section section-warm">

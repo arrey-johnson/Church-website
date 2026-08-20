@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react'
 import { useI18n } from '../i18n/context'
-import { site } from '../data/site'
 import { PageHero } from '../components/PageHero'
 import { Reveal } from '../components/Reveal'
 import { Seo } from '../components/Seo'
@@ -32,17 +31,6 @@ export function TeachingsPage() {
       />
       <section className="section">
         <div className="wrap">
-          <Reveal
-            className="media-frame wide centered"
-            style={{ marginBottom: '1.8rem' }}
-          >
-            <img
-              src={site.images.message}
-              alt={t.media.altMessage}
-              loading="lazy"
-              decoding="async"
-            />
-          </Reveal>
           <Reveal className="search-row">
             <input
               value={query}
@@ -66,7 +54,7 @@ export function TeachingsPage() {
           {items.length === 0 ? <p className="muted">{t.teachings.empty}</p> : null}
           <div className="teach-grid">
             {items.map((item, index) => (
-              <Reveal key={item.id} as="article" className="card" delay={index * 70}>
+              <Reveal key={item.id} as="article" className="card soft-card" delay={index * 70}>
                 <span className="badge">{item.kind}</span>
                 <h3 style={{ marginTop: '0.85rem' }}>{item.title}</h3>
                 <p className="muted">{item.excerpt}</p>

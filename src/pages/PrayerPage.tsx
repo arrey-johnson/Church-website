@@ -22,12 +22,11 @@ export function PrayerPage() {
                 <a href={t.brand.websiteUrl} target="_blank" rel="noreferrer">
                   {t.brand.website}
                 </a>
-                <span className="muted">{t.common.phonePending}</span>
               </div>
             </Reveal>
-            <Reveal as="article" className="info-card pending" delay={100}>
+            <Reveal as="article" className="soft-block" delay={100}>
               <h3>{t.common.contact}</h3>
-              <p>{t.prayer.emergency}</p>
+              <p className="muted">{t.prayer.emergency}</p>
             </Reveal>
           </div>
           <Reveal delay={140}>

@@ -35,7 +35,7 @@ export function VisionPage() {
           </Reveal>
           <div className="benefit-grid">
             {t.vision.beliefs.map((item, index) => (
-              <Reveal key={item.title} as="article" className="belief" delay={index * 70}>
+              <Reveal key={item.title} as="article" className="soft-block" delay={index * 70}>
                 <div className="num">{String(index + 1).padStart(2, '0')}</div>
                 <h3>{item.title}</h3>
                 <p className="muted">{item.body}</p>

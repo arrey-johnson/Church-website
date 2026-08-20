@@ -65,9 +65,6 @@ export function HomePage() {
                 {t.cta.visit}
               </Button>
             </div>
-            <p className="draft-note hero-enter" style={{ ['--enter-delay' as string]: '460ms' }}>
-              {t.common.confidential}
-            </p>
           </div>
           <aside className="hero-panel hero-enter" style={{ ['--enter-delay' as string]: '280ms' }}>
             <img
@@ -124,7 +121,7 @@ export function HomePage() {
           </Reveal>
           <div className="benefit-grid">
             {t.home.benefits.map((item, index) => (
-              <Reveal key={item.n} as="article" className="benefit" delay={index * 90}>
+              <Reveal key={item.n} as="article" className="soft-block" delay={index * 90}>
                 <div className="num">{item.n}</div>
                 <h3>{item.title}</h3>
                 <p className="muted">{item.body}</p>
@@ -142,7 +139,7 @@ export function HomePage() {
           </Reveal>
           <div className="process">
             {t.home.process.map((item, index) => (
-              <Reveal key={item.n} as="article" className="step" delay={index * 110} variant="scale">
+              <Reveal key={item.n} as="article" className="soft-block" delay={index * 110} variant="scale">
                 <div className="num">{item.n}</div>
                 <h3>{item.title}</h3>
                 <p className="muted">{item.body}</p>
@@ -153,7 +150,7 @@ export function HomePage() {
       </section>
 
       <section className="section">
-        <div className="wrap split">
+        <div className="wrap">
           <Reveal className="section-head">
             <p className="kicker">{t.home.proofKicker}</p>
             <h2>{t.home.proofTitle}</h2>
@@ -164,12 +161,6 @@ export function HomePage() {
               <Button to={to('testimonies')} variant="navy">
                 {t.cta.story}
               </Button>
-            </div>
-          </Reveal>
-          <Reveal delay={140} variant="left">
-            <div className="info-card pending">
-              <h3>{t.common.sample}</h3>
-              <p className="muted">{t.testimonies.awaitBody}</p>
             </div>
           </Reveal>
         </div>

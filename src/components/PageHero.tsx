@@ -1,5 +1,3 @@
-import { useI18n } from '../i18n/context'
-
 type Props = {
   kicker: string
   title: string
@@ -8,8 +6,6 @@ type Props = {
 }
 
 export function PageHero({ kicker, title, lead, align = 'left' }: Props) {
-  const { t } = useI18n()
-
   return (
     <header className={`page-hero${align === 'center' ? ' is-centered' : ''}`}>
       <div className="wrap">
@@ -27,9 +23,6 @@ export function PageHero({ kicker, title, lead, align = 'left' }: Props) {
             {lead}
           </p>
         ) : null}
-        <p className="draft-note hero-enter" style={{ ['--enter-delay' as string]: '260ms' }}>
-          {t.common.draft}
-        </p>
       </div>
     </header>
   )

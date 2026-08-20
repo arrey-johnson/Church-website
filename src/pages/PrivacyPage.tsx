@@ -13,7 +13,7 @@ export function PrivacyPage() {
       <section className="section">
         <div className="wrap" style={{ display: 'grid', gap: '1rem' }}>
           {t.privacy.sections.map((item, index) => (
-            <Reveal key={item.title} as="article" className="card" delay={index * 70}>
+            <Reveal key={item.title} as="article" className="soft-block" delay={index * 70}>
               <h3>{item.title}</h3>
               <p className="muted">{item.body}</p>
             </Reveal>
