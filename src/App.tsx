@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
+import { defaultLang } from './i18n'
 import { Layout } from './components/Layout'
 import { HomePage } from './pages/HomePage'
 import { MinistriesPage } from './pages/MinistriesPage'
@@ -14,7 +15,7 @@ import { VisionPage } from './pages/VisionPage'
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/en" replace />} />
+      <Route path="/" element={<Navigate to={`/${defaultLang}`} replace />} />
       <Route path="/:lang" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="new-here" element={<NewHerePage />} />

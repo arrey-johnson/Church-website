@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from 'react'
 import { Navigate, Outlet, useParams } from 'react-router-dom'
-import { isLang, messages } from '../i18n'
+import { defaultLang, isLang, messages } from '../i18n'
 import { I18nContext } from '../i18n/context'
 import { Footer } from './Footer'
 import { Header } from './Header'
@@ -10,7 +10,7 @@ import { PageFade } from './PageFade'
 export function Layout() {
   const { lang } = useParams()
   const valid = isLang(lang)
-  const resolved = valid ? lang : 'en'
+  const resolved = valid ? lang : defaultLang
   const t = messages[resolved]
   const value = useMemo(
     () => ({
@@ -26,7 +26,7 @@ export function Layout() {
   }, [resolved])
 
   if (!valid) {
-    return <Navigate to="/en" replace />
+    return <Navigate to={`/${defaultLang}`} replace />
   }
 
   return (

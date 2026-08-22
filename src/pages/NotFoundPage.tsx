@@ -1,9 +1,9 @@
 import { Link, useParams } from 'react-router-dom'
-import { isLang, messages } from '../i18n'
+import { defaultLang, isLang, messages } from '../i18n'
 
 export function NotFoundPage() {
   const { lang } = useParams()
-  const resolved = isLang(lang) ? lang : 'en'
+  const resolved = isLang(lang) ? lang : defaultLang
   const t = messages[resolved]
 
   return (
