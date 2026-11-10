@@ -1,0 +1,35 @@
+Options -Indexes
+ServerSignature Off
+
+<IfModule mod_authz_core.c>
+  <FilesMatch "^(config\.php|composer\.(json|lock)|DEPLOY\.md|README\.md)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # If the site is in a subdirectory, uncomment and set it:
+  # RewriteBase /your-folder/
+
+  # Block direct web access to app internals.
+  RewriteRule ^(includes|lang|pages|storage)(/|$) - [F,L]
+
+  # Keep local PHP built-in router private on Apache hosts.
+  RewriteRule ^router\.php$ - [F,L]
+
+  # Serve real files and directories as-is.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Front controller for pretty URLs (/fr, /en/prayer, ...).
+  RewriteRule ^ index.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

@@ -1,24 +1,21 @@
-# Logs
-logs
+# Local / OS
+.DS_Store
+Thumbs.db
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
 *.local
 
-# Editor directories and files
+# Editor
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+
+# Form submissions (keep folder, ignore contents)
+storage/submissions/*
+!storage/submissions/.gitkeep
+!storage/submissions/.htaccess
+
+# Packaging / local tools
+*.zip
+node_modules
+dist
+dist-ssr
